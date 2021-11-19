@@ -95,10 +95,10 @@
             color: #2a2a2a;
         }
 
-        /*.un:focus, .pass:focus {*/
-        /*    text-align: left;*/
-        /*    border: 2px solid rgba(0, 0, 0, 0.18) !important;*/
-        /*}*/
+        .un:hover, .pass:hover {
+            opacity: .8;
+            border: 2px solid #2a2a2a !important;
+        }
 
         .submit {
             width: 30%;
@@ -120,6 +120,11 @@
             text-align: left;
             margin-bottom: 27px;
             font-family: 'Nunito', sans-serif;
+        }
+
+        .submit:hover{
+            opacity: .8;
+            background-image: linear-gradient(to top right, #CC09C5FF 10%, red 65%, yellow);
         }
 
         .google {
@@ -145,7 +150,7 @@
         }
 
         .google:hover {
-            background: linear-gradient(to top right, #CC09C5FF 10%, red 65%, yellow) border-box;
+            background: linear-gradient(to top right, #CC09C5FF 10%, red 65%, yellow) ;
         }
 
         .facebook {
