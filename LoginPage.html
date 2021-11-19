@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body {
+            margin: 0;
+            height: 100%;
+            overflow: auto;
             background-color: #B1B1B1;
             font-family: 'Nunito', sans-serif;
         }
@@ -85,12 +88,13 @@
             font-family: 'Nunito', sans-serif;
         }
 
-        .or{
+        .or {
             text-align: center;
             font-family: 'Nunito', sans-serif;
             font-size: 35px;
             color: #2a2a2a;
         }
+
         /*.un:focus, .pass:focus {*/
         /*    text-align: left;*/
         /*    border: 2px solid rgba(0, 0, 0, 0.18) !important;*/
@@ -104,7 +108,7 @@
             font-weight: 700;
             font-size: 16px;
             letter-spacing: 1px;
-            background-image: linear-gradient(to top right, #CC09C5FF 10%, red 65%,yellow);
+            background-image: linear-gradient(to top right, #CC09C5FF 10%, red 65%, yellow);
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
@@ -118,7 +122,7 @@
             font-family: 'Nunito', sans-serif;
         }
 
-        .google{
+        .google {
             width: 30%;
             height: 60px;
             cursor: pointer;
@@ -138,7 +142,7 @@
             font-family: 'Nunito', sans-serif;
         }
 
-        .facebook{
+        .facebook {
             width: 30%;
             height: 60px;
             cursor: pointer;
@@ -157,7 +161,8 @@
             margin-bottom: 27px;
             font-family: 'Nunito', sans-serif;
         }
-        .apple{
+
+        .apple {
             width: 30%;
             height: 60px;
             cursor: pointer;
@@ -180,6 +185,8 @@
 
         .forgot {
             text-align: center;
+            text-decoration: underline;
+            text-decoration-color: #9B9B9B9D;
             text-shadow: 0 0 3px rgba(185, 170, 170, 0.12);
             color: #ffffff;
             padding-top: 15px;
@@ -197,9 +204,29 @@
             }
         }
 
-        .fa{
+        .fa {
             font-size: 22px;
             margin-right: 20px;
+        }
+
+        .privacy {
+            margin-left: 60px;
+            margin-right: 460px;
+            text-align: left;
+            margin-bottom: 27px;
+            font-size: 16px;
+            color: #2a2a2a;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .copyright {
+            margin-right: 60px;
+            margin-left: 460px;
+            text-align: right;
+            margin-bottom: 27px;
+            font-size: 16px;
+            color: #2a2a2a;
+            font-family: 'Nunito', sans-serif;
         }
     </style>
 </head>
@@ -230,12 +257,19 @@
 
         <div align="center">
 
-             <button class="submit" align="left">Login to Your Account   <i class="fa fa-arrow-right" style="margin-left: 100px"></i></button>
+            <button class="submit" align="left">Login to Your Account <i class="fa fa-arrow-right"
+                                                                         style="margin-left: 70px"></i></button>
 
             <button class="apple" align="right"><i class="fa fa-apple"></i>Sign in with Apple Account</button>
 
         </div>
-        <p class="forgot"><u><a href="#">Forgot Password?</a></u></p>
+        <div align="center">
+            <p><a class="forgot" href="#">Forgot Password?</a></p>
+        </div>
+        <div>
+            <a class="privacy" href="#" style="alignment: left">Privacy Policy</a>
+            <a class="copyright" href="#" style="alignment: right">Copyright@OTS2021</a>
+        </div>
 
     </form>
 </div>
