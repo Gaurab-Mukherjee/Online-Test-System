@@ -10,11 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- title -->
-    <title>Online Test System</title>
+    <title>Student Home Page</title>
 
     <!-- link css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
 
@@ -72,60 +74,120 @@
 
 <br>
 
-<div id="index-app-name" class="index-app-name">
-    <h1>Online Test System</h1>
-</div>
+<!-- CSS FOR BUTTONS -->
+<style>
+    body {
+        margin: 0;
+        height: 100%;
+        overflow: auto;
+        background-color: #0B0B45;
+        font-family: 'Nunito', sans-serif;
+    }
 
+    .main {
+        background-color: #000000;
+        alignment: center;
+        width: 1300px;
+        height: 650px;
+        margin: 20px auto;
+        border-radius: 0em;
+        box-shadow: 0 11px 35px 2px rgba(0, 0, 0, 0.14);
+    }
+
+    .sign {
+        text-align: center;
+        padding-top: 35px;
+        color: #ffffff;
+        font-family: 'Nunito', sans-serif;
+        font-weight: 900;
+        font-size: 35px;
+    }
+
+    .button1 {
+        width: 30%;
+        height: 60px;
+        cursor: pointer;
+        color: white;
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 1px;
+        background-image: linear-gradient(to top right, #CC09C5FF 10%, red 65%, yellow);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        box-sizing: border-box;
+        border: 2px #2a2a2a;
+        margin-left: 50px;
+        margin-right: 50px;
+        text-align: left;
+        margin-bottom: 27px;
+        font-family: 'Nunito', sans-serif;
+        font-weight: 900;
+    }
+
+    .button1:hover{
+        opacity: .8;
+        background-image: linear-gradient(to top right, #CC09C5FF 10%, red 65%, yellow);
+    }
+
+    .button2 {
+        width: 30%;
+        height: 60px;
+        cursor: pointer;
+        color: white;
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 1px;
+        background: black;
+        padding: 10px 20px;
+        border-radius: 5px;
+        box-sizing: border-box;
+        border: 2px solid transparent;
+        margin-right: 50px;
+        margin-left: 50px;
+        text-align: left;
+        margin-bottom: 27px;
+        font-family: 'Nunito', sans-serif;
+        background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg) padding-box fixed,
+        linear-gradient(to top right, #CC09C5FF 10%, red 65%, yellow) border-box;
+    }
+
+    .button2:hover {
+        background: linear-gradient(to top right, #CC09C5FF 10%, red 65%, yellow) border-box;
+    }
+
+</style>
+<!-- CSS FOR BUTTONS -->
+
+<!-- HTML FOR BUTTONS -->
+<div class="main">
+    <h1 class="sign">Your Dashboard</h1>
+    <br>
+    <br>
+        <div align="left">
+            <button class="button1" align="center">Enroll as Student<i class="fa fa-arrow-right" style="margin-left:10px"></i></button>
+        </div>
+
+        <div align="left">
+            <button class="button2" align="center">Check Result</button>
+        </div>
+
+        <div align="left">
+            <button class="button2" align="center">Start Exam
+            </button>
+        </div>
+        <div align="left">
+            <button class="button2" align="center">Give Feedback</button>
+        </div>
+
+</div>
+<!-- HTML FOR BUTTONS -->
 <br>
 <br>
 
 <!-- Footer -->
 <footer class="page-footer font-small unique-color-dark" style="background-color: #141526;">
-
-    <div style="background-color: #6351ce;">
-        <div class="container">
-
-            <!-- Grid row-->
-            <div class="row py-4 d-flex align-items-center">
-
-                <!-- Grid column -->
-                <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-                    <h6 class="mb-0">Get connected with us on social networks!</h6>
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-6 col-lg-7 text-center text-md-right">
-
-                    <!-- Facebook -->
-                    <a class="fb-ic">
-                        <i class="fab fa-facebook-f white-text mr-4"> </i>
-                    </a>
-                    <!-- Twitter -->
-                    <a class="tw-ic">
-                        <i class="fab fa-twitter white-text mr-4"> </i>
-                    </a>
-                    <!-- Google +-->
-                    <a class="gplus-ic">
-                        <i class="fab fa-google-plus-g white-text mr-4"> </i>
-                    </a>
-                    <!--Linkedin -->
-                    <a class="li-ic">
-                        <i class="fab fa-linkedin-in white-text mr-4"> </i>
-                    </a>
-                    <!--Instagram-->
-                    <a class="ins-ic">
-                        <i class="fab fa-instagram white-text"> </i>
-                    </a>
-
-                </div>
-                <!-- Grid column -->
-
-            </div>
-            <!-- Grid row-->
-
-        </div>
-    </div>
 
     <!-- Footer Links -->
     <div class="container text-center text-md-left mt-5" style="color: #f1f1f1">
@@ -137,11 +199,9 @@
             <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
 
                 <!-- Content -->
-                <h6 class="text-uppercase font-weight-bold">Company name</h6>
+                <h6 class="text-uppercase font-weight-bold">About</h6>
                 <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-                    consectetur
-                    adipisicing elit.</p>
+                <p>PLACEHOLDER TEXT.</p>
 
             </div>
             <!-- Grid column -->
@@ -153,16 +213,13 @@
                 <h6 class="text-uppercase font-weight-bold">Products</h6>
                 <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p>
-                    <a href="#!">MDBootstrap</a>
+                    <a href="#!">PLACEHOLDER</a>
                 </p>
                 <p>
-                    <a href="#!">MDWordPress</a>
+                    <a href="#!">PLACEHOLDER</a>
                 </p>
                 <p>
-                    <a href="#!">BrandFlow</a>
-                </p>
-                <p>
-                    <a href="#!">Bootstrap Angular</a>
+                    <a href="#!">PLACEHOLDER</a>
                 </p>
 
             </div>
@@ -178,13 +235,13 @@
                     <a href="#!">Your Account</a>
                 </p>
                 <p>
-                    <a href="#!">Become an Affiliate</a>
-                </p>
-                <p>
-                    <a href="#!">Shipping Rates</a>
+                    <a href="#!">Updates</a>
                 </p>
                 <p>
                     <a href="#!">Help</a>
+                </p>
+                <p>
+                    <a href="#!">Feedback</a>
                 </p>
 
             </div>
@@ -197,13 +254,11 @@
                 <h6 class="text-uppercase font-weight-bold">Contact</h6>
                 <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p>
-                    <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+                    <i class="fas fa-home mr-3"></i> Kolkata </p>
                 <p>
                     <i class="fas fa-envelope mr-3"></i> info@example.com</p>
                 <p>
                     <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-                <p>
-                    <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
 
             </div>
             <!-- Grid column -->
@@ -215,8 +270,8 @@
     <!-- Footer Links -->
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3" style="background: black ">© 2020 Copyright:
-        <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+    <div class="footer-copyright text-center py-3" style="background: black ">©2021 Project for:
+        <a href="https://iem.edu.in/"> IEM</a>
     </div>
     <!-- Copyright -->
 
