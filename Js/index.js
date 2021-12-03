@@ -1,4 +1,4 @@
 
     function signup_btn() {
-        document.location.href = "Online Test System/LoginPage.html";
+        window.location.href = "Online Test System/LoginPage.html";
     }
