@@ -3,7 +3,7 @@
 <head>
 
     <!-- JavaScript added -->
-    <script type="text/javascript" src="Js/index.js"></script>
+<!--    <script type="text/javascript" src="Js/index.js"></script>-->
 
     <!-- metadata -->
     <meta charset="UTF-8">
@@ -18,23 +18,106 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!-- CSS FOR BUTTONS -->
     <style>
 
-        .index-app-name{
-            display: inline;
+        /*.index-app-name{*/
+        /*    display: inline;*/
+        /*    text-align: center;*/
+        /*    width: 600px;*/
+        /*    height: 600px;*/
+        /*    !*background-image: url("https://direct-upload-bucket.s3.ap-south-1.amazonaws.com/OTSback.jpg");*!*/
+        /*}*/
+
+        body {
+            margin: 0;
+            height: 100%;
+            overflow: auto;
+            background-color: #180022;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .main {
+            background-color: black;
+            alignment: center;
+            width: 1300px;
+            height: 650px;
+            margin: 20px auto;
+            border-radius: 0.5em;
+            box-shadow: 0 11px 35px 2px rgba(0, 0, 0, 0.14);
+        }
+
+        .sign {
             text-align: center;
-            width: 600px;
-            height: 600px;
-            /*background-image: url("https://direct-upload-bucket.s3.ap-south-1.amazonaws.com/OTSback.jpg");*/
+            padding-top: 35px;
+            color: #ffffff;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 900;
+            font-size: 35px;
+        }
+
+        .button1 {
+            width: 30%;
+            height: 60px;
+            cursor: pointer;
+            color: white;
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 1px;
+            background-image: linear-gradient(to top right, #CC09C5FF 10%, red 65%, yellow);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+            box-sizing: border-box;
+            border: 2px #2a2a2a;
+            margin-left: 50px;
+            margin-right: 50px;
+            text-align: left;
+            margin-bottom: 27px;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 900;
+        }
+
+        .button1:hover{
+            opacity: .8;
+            background-image: linear-gradient(to top right, #CC09C5FF 10%, red 65%, yellow);
+        }
+
+        .button2 {
+            width: 30%;
+            height: 60px;
+            cursor: pointer;
+            color: white;
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 1px;
+            background: black;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-sizing: border-box;
+            border: 2px solid transparent;
+            margin-right: 50px;
+            margin-left: 50px;
+            text-align: left;
+            margin-bottom: 27px;
+            font-family: 'Nunito', sans-serif;
+            background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg) padding-box fixed,
+            linear-gradient(to top right, #CC09C5FF 10%, red 65%, yellow) border-box;
+        }
+
+        .button2:hover {
+            background: linear-gradient(to top right, #CC09C5FF 10%, red 65%, yellow) border-box;
         }
 
     </style>
+    <!-- CSS FOR BUTTONS -->
 </head>
 <body>
 <!-- navigation bar -->
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #34004a;padding-top: 15px;padding-bottom: 15px">
     <a class="navbar-brand" href="#">
-        <img src="Img/logoOTS.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+        <img src="/Img/logoOTS.svg" width="30" height="30" class="d-inline-block align-top" alt="">
         Online Test System
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,92 +154,6 @@
 <!-- navigation bar -->
 
 <br>
-
-<!-- CSS FOR BUTTONS -->
-<style>
-    body {
-        margin: 0;
-        height: 100%;
-        overflow: auto;
-        background-color: #180022;
-        font-family: 'Nunito', sans-serif;
-    }
-
-    .main {
-        background-color: black;
-        alignment: center;
-        width: 1300px;
-        height: 650px;
-        margin: 20px auto;
-        border-radius: 0.5em;
-        box-shadow: 0 11px 35px 2px rgba(0, 0, 0, 0.14);
-    }
-
-    .sign {
-        text-align: center;
-        padding-top: 35px;
-        color: #ffffff;
-        font-family: 'Nunito', sans-serif;
-        font-weight: 900;
-        font-size: 35px;
-    }
-
-    .button1 {
-        width: 30%;
-        height: 60px;
-        cursor: pointer;
-        color: white;
-        font-weight: 700;
-        font-size: 16px;
-        letter-spacing: 1px;
-        background-image: linear-gradient(to top right, #CC09C5FF 10%, red 65%, yellow);
-        padding: 10px 20px;
-        border: none;
-        border-radius: 8px;
-        outline: none;
-        box-sizing: border-box;
-        border: 2px #2a2a2a;
-        margin-left: 50px;
-        margin-right: 50px;
-        text-align: left;
-        margin-bottom: 27px;
-        font-family: 'Nunito', sans-serif;
-        font-weight: 900;
-    }
-
-    .button1:hover{
-        opacity: .8;
-        background-image: linear-gradient(to top right, #CC09C5FF 10%, red 65%, yellow);
-    }
-
-    .button2 {
-        width: 30%;
-        height: 60px;
-        cursor: pointer;
-        color: white;
-        font-weight: 700;
-        font-size: 16px;
-        letter-spacing: 1px;
-        background: black;
-        padding: 10px 20px;
-        border-radius: 8px;
-        box-sizing: border-box;
-        border: 2px solid transparent;
-        margin-right: 50px;
-        margin-left: 50px;
-        text-align: left;
-        margin-bottom: 27px;
-        font-family: 'Nunito', sans-serif;
-        background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg) padding-box fixed,
-        linear-gradient(to top right, #CC09C5FF 10%, red 65%, yellow) border-box;
-    }
-
-    .button2:hover {
-        background: linear-gradient(to top right, #CC09C5FF 10%, red 65%, yellow) border-box;
-    }
-
-</style>
-<!-- CSS FOR BUTTONS -->
 
 <!-- HTML FOR BUTTONS -->
 <div class="main">
