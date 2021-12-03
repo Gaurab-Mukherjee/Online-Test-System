@@ -20,3 +20,7 @@
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
+
+    document.getElementById("signin_btn").onclick = function () {
+        location.href = 'Online Test System/LoginPage.html';
+    };
