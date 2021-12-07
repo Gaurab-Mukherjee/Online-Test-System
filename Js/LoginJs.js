@@ -1,22 +1,29 @@
 
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-analytics.js";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { GoogleAuthProvider } from "firebase/auth";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-    apiKey: "AIzaSyCmQSird5PmlaN89gGEiOMRNxdDG_v8YNw",
-    authDomain: "onlinetestsystem-a4cc4.firebaseapp.com",
-    projectId: "onlinetestsystem-a4cc4",
-    storageBucket: "onlinetestsystem-a4cc4.appspot.com",
-    messagingSenderId: "822940975771",
-    appId: "1:822940975771:web:28fbe25245ce527e1cfc3e",
-    measurementId: "G-RD31LXMBSG"
-};
+function loginWithGoogle(){
+    const provider = new GoogleAuthProvider();
+  //  provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+    import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+
+    const auth = getAuth();
+    signInWithPopup(auth, provider)
+        .then((result) => {
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            const credential = GoogleAuthProvider.credentialFromResult(result);
+            const token = credential.accessToken;
+            // The signed-in user info.
+            const user = result.user;
+            // ...
+        }).catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // The email of the user's account used.
+        const email = error.email;
+        // The AuthCredential type that was used.
+        const credential = GoogleAuthProvider.credentialFromError(error);
+        // ...
+    });
+}
