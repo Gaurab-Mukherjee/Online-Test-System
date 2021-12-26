@@ -2,6 +2,10 @@
 <html lang="eng" xmlns="http://www.w3.org/1999/html">
 
 <head>
+
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+
     <title>Sign In / Sign Up</title>
     <link rel="icon" type="image/x-icon" href="Img/logoOTS.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -125,7 +129,7 @@
             font-family: 'Nunito', sans-serif;
         }
 
-        .submit:hover{
+        .submit:hover {
             opacity: .8;
             background-image: linear-gradient(to top right, #CC09C5FF 10%, red 65%, yellow);
         }
@@ -263,7 +267,6 @@
 
 <body>
 <!-- JavaScript added -->
-<script type="text/javascript" src="Js/LoginJs.js"></script>
 <div class="main">
     <p class="sign">Login to Your Account</p>
     <p class="txt_ln">Welcome back! Please login to your account to continue</p>
@@ -273,7 +276,8 @@
                 <input class="un " type="text" placeholder="Admin / Teacher / Student ID">
             </label>
 
-            <button class="google" onclick="loginWithGoogle()" align="right"><i class="fa fa-google"></i>Sign in with Google</button>
+            <button class="google" id="loginWithGoogle" align="right"><i class="fa fa-google"></i>Sign in with Google
+            </button>
         </div>
 
         <div align="center">
@@ -308,5 +312,42 @@
 
     </form>
 </div>
+
+<!-- Import the functions you need from the SDKs you need-->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use-->
+<!-- https://firebase.google.com/docs/web/setup#available-libraries-->
+<script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyCmQSird5PmlaN89gGEiOMRNxdDG_v8YNw",
+        authDomain: "onlinetestsystem-a4cc4.firebaseapp.com",
+        projectId: "onlinetestsystem-a4cc4",
+        storageBucket: "onlinetestsystem-a4cc4.appspot.com",
+        messagingSenderId: "822940975771",
+        appId: "1:822940975771:web:28fbe25245ce527e1cfc3e",
+        measurementId: "G-RD31LXMBSG"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+</script>
+<script>
+    document.getElementById('loginWithGoogle').addEventListener('click',GoogleLogin);
+
+    const provider = new firebase.auth.GoogleAuthProvider()
+
+    function GoogleLogin(){
+        console.log('--------------->>> LoginDone');
+        firebase.auth().signInWithPopup(provider).then(res=>{
+                console.log(res.user)
+            }).catch(e=>{
+            console.log(e)
+        })
+    }
+</script>
+
 </body>
 </html>
