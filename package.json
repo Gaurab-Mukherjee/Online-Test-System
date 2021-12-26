@@ -2,6 +2,7 @@
   "name": "Online Test System",
   "version": "1.0.0",
   "dependencies": {
-    "@firebase/app": "^0.7.11"
+    "@firebase/app": "^0.7.11",
+    "firebase": "^9.6.1"
   }
 }

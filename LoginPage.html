@@ -318,9 +318,11 @@
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
 <!-- TODO: Add SDKs for Firebase products that you want to use-->
 <!-- https://firebase.google.com/docs/web/setup#available-libraries-->
-<script>
+<script type="module">
     // Your web app's Firebase configuration
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    import firebase from "../Online Test System/node_modules/firebase/compat";
+
     const firebaseConfig = {
         apiKey: "AIzaSyCmQSird5PmlaN89gGEiOMRNxdDG_v8YNw",
         authDomain: "onlinetestsystem-a4cc4.firebaseapp.com",
@@ -333,15 +335,16 @@
 
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
-</script>
-<script>
+
     document.getElementById('loginWithGoogle').addEventListener('click',GoogleLogin);
 
-    const provider = new firebase.auth.GoogleAuthProvider()
+    const auth = firebase.auth();
 
-    function GoogleLogin(){
+    const GoogleLogin = () =>{
+        const provider = new firebase.auth.GoogleAuthProvider();
         console.log('--------------->>> LoginDone');
-        firebase.auth().signInWithPopup(provider).then(res=>{
+        firebase.auth().signInWithPopup(provider)
+            .then(res=>{
                 console.log(res.user)
             }).catch(e=>{
             console.log(e)
