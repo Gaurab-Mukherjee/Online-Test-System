@@ -18,7 +18,7 @@ import firebase from "../../node_modules/firebase/compat";
 // }
 
 
-document.getElementById('loginWithGoogle' ).onclick(GoogleLogin());
+document.getElementById('loginWithGoogle' ).addEventListener('click',GoogleLogin);
 
     function GoogleLogin(){
         const provider = new firebase.auth.GoogleAuthProvider();
