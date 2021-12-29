@@ -1,4 +1,3 @@
-<!--
 <!DOCTYPE html>
 <html lang="eng" xmlns="http://www.w3.org/1999/html">
 
@@ -6,7 +5,7 @@
     <title>Sign In / Sign Up</title>
     <link rel="icon" type="image/x-icon" href="Img/logoOTS.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    &lt;!&ndash; Add icon library &ndash;&gt;
+    <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
@@ -60,18 +59,12 @@
             outline: none;
             box-sizing: border-box;
             border: 2px #2a2a2a;
-            margin-left: 150px;
-            margin-right: 50px;
             text-align: left;
             margin-bottom: 27px;
             font-family: 'Nunito', sans-serif;
         }
 
-        form.form1 {
-            padding-top: 40px;
-        }
-
-        .pass {
+        .un1 {
             width: 30%;
             height: 60px;
             color: rgba(255, 255, 255, 0.68);
@@ -85,19 +78,36 @@
             outline: none;
             box-sizing: border-box;
             border: 2px #2a2a2a;
-            margin-left: 150px;
-            margin-right: 39px;
             text-align: left;
             margin-bottom: 27px;
             font-family: 'Nunito', sans-serif;
         }
 
-        .or {
-            text-align: center;
+
+        .un2 {
+            width: 15%;
+            height: 37px;
+            color: rgba(255, 255, 255, 0.68);
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 1px;
+            background: #2a2a2a;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            box-sizing: border-box;
+            border: 2px #2a2a2a;
+            margin-left: 10px;
+            text-align: left;
+            margin-bottom: 27px;
             font-family: 'Nunito', sans-serif;
-            font-size: 35px;
-            color: #2a2a2a;
         }
+
+        form.form1 {
+            padding-top: 40px;
+        }
+
 
         .un:hover, .pass:hover {
             opacity: .8;
@@ -119,8 +129,6 @@
             outline: none;
             box-sizing: border-box;
             border: 2px #2a2a2a;
-            margin-left: 150px;
-            margin-right: 50px;
             text-align: left;
             margin-bottom: 27px;
             font-family: 'Nunito', sans-serif;
@@ -131,97 +139,6 @@
             background-image: linear-gradient(to top right, #CC09C5FF 10%, red 65%, yellow);
         }
 
-        .google {
-            width: 30%;
-            height: 60px;
-            cursor: pointer;
-            color: white;
-            font-weight: 700;
-            font-size: 16px;
-            letter-spacing: 1px;
-            background: black;
-            padding: 10px 20px;
-            border-radius: 5px;
-            box-sizing: border-box;
-            border: 2px solid transparent;
-            margin-right: 150px;
-            margin-left: 50px;
-            text-align: left;
-            margin-bottom: 27px;
-            font-family: 'Nunito', sans-serif;
-            background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg) padding-box fixed,
-            linear-gradient(to top right, #CC09C5FF 10%, red 65%, yellow) border-box;
-        }
-
-        .google:hover {
-            background: linear-gradient(to top right, #CC09C5FF 10%, red 65%, yellow) border-box;
-        }
-
-        .facebook {
-            width: 30%;
-            height: 60px;
-            cursor: pointer;
-            color: white;
-            font-weight: 700;
-            font-size: 16px;
-            letter-spacing: 1px;
-            background: black;
-            padding: 10px 20px;
-            border-radius: 5px;
-            box-sizing: border-box;
-            border: 2px solid transparent;
-            margin-right: 150px;
-            margin-left: 39px;
-            text-align: left;
-            margin-bottom: 27px;
-            font-family: 'Nunito', sans-serif;
-            background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg) padding-box fixed,
-            linear-gradient(to top right, #CC09C5FF 10%, red 65%, yellow) border-box;
-        }
-
-        .facebook:hover {
-            background: linear-gradient(to top right, #CC09C5FF 10%, red 65%, yellow) border-box;
-        }
-
-        .apple {
-            width: 30%;
-            height: 60px;
-            cursor: pointer;
-            color: white;
-            font-weight: 700;
-            font-size: 16px;
-            letter-spacing: 1px;
-            padding: 10px 20px;
-            border-radius: 5px;
-            background: black;
-            outline: none;
-            box-sizing: border-box;
-            border: 2px solid transparent;
-            margin-right: 150px;
-            margin-left: 50px;
-            text-align: left;
-            margin-bottom: 27px;
-            font-family: 'Nunito', sans-serif;
-            background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg) padding-box fixed,
-            linear-gradient(to top right, #CC09C5FF 10%, red 65%, yellow) border-box;
-        }
-
-        .apple:hover {
-            background: linear-gradient(to top right, #CC09C5FF 10%, red 65%, yellow) border-box;
-        }
-
-        .forgot {
-            text-align: center;
-            text-decoration: underline;
-            text-decoration-color: #9B9B9B9D;
-            text-shadow: 0 0 3px rgba(185, 170, 170, 0.12);
-            color: #ffffff;
-            padding-top: 15px;
-        }
-
-        .forgot:hover {
-            color: darkgrey;
-        }
 
         a {
             text-shadow: 0 0 3px rgba(117, 117, 117, 0.12);
@@ -264,38 +181,36 @@
 
 <body>
 <div class="main">
-    <p class="sign">Register for Your Account</p>
-    <p class="txt_ln">Welcome back! Please login to your account to continue</p>
+    <h1 class="sign">Register to Your Account</h1>
+    <p class="txt_ln">Welcome back! Please register to your account to continue</p>
+
     <form class="form1">
         <div align="center">
-            <label>
-                <input class="un " type="text" placeholder="Admin / Teacher / Student ID">
-            </label>
-
-            <button class="google" align="right"><i class="fa fa-google"></i>Sign in with Google</button>
+            <label class= "un1 " for="user_type">Choose user type:</label>
+            <select class= "un2 " name="User Type" id="user_type" style="margin-bottom: 30px">
+                <option value="admin">Admin</option>
+                <option value="faculty">Teacher</option>
+                <option value="student">Student</option>
+            </select>
         </div>
-
         <div align="center">
-
             <label>
-                <input class="pass" type="password" placeholder="8 Digit Pin">
+                <input class="un " type="text" placeholder="Enter Your Name">
             </label>
-
-            <a class="or"> / </a>
-
-            <button class="facebook" align="right"><i class="fa fa-facebook"></i> Sign in with Facebook</button>
         </div>
-
         <div align="center">
-
-            <button class="submit" align="left">Login to Your Account <i class="fa fa-arrow-right"
+            <label>
+                <input class="un " type="text" placeholder="Enter Your Address">
+            </label>
+        </div>
+        <div align="center">
+            <label>
+                <input class="un " type="text" placeholder="Enter Your Contact No.">
+            </label>
+        </div>
+        <div align="center">
+            <button class="submit" align="left">Register to Your Account <i class="fa fa-arrow-right"
                                                                          style="margin-left: 70px"></i></button>
-
-            <button class="apple" align="right"><i class="fa fa-apple"></i>Sign in with Apple</button>
-
-        </div>
-        <div align="center">
-            <p><a class="forgot" href="#">Forgot Password?</a></p>
         </div>
         <br>
         <br>
@@ -308,4 +223,4 @@
     </form>
 </div>
 </body>
-</html>-->
+</html>
