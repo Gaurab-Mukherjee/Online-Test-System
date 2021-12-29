@@ -1,4 +1,5 @@
-
+const firebase = require('firebase/app')
+require('firebase/analytics')
 const firebaseConfig = {
     apiKey: "AIzaSyCmQSird5PmlaN89gGEiOMRNxdDG_v8YNw",
     authDomain: "onlinetestsystem-a4cc4.firebaseapp.com",
@@ -11,4 +12,4 @@ const firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+// firebase.analytics();
