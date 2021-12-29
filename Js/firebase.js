@@ -1,4 +1,5 @@
-let firebaseConfig = {
+
+const firebaseConfig = {
     apiKey: "AIzaSyCmQSird5PmlaN89gGEiOMRNxdDG_v8YNw",
     authDomain: "onlinetestsystem-a4cc4.firebaseapp.com",
     databaseURL: "https://onlinetestsystem-a4cc4-default-rtdb.firebaseio.com",
@@ -10,4 +11,4 @@ let firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-firebase.getAnalytics();
+firebase.analytics();
