@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "firebase": "^9.6.1",
-    "type": "module"
+    "firebase": "^9.6.1"
   }
 }
