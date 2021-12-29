@@ -1,4 +1,4 @@
-document.getElementById("loginWithGoogle").addEventListener("submit",(event)=>{
+document.getElementById("loginForm").addEventListener("submit",(event)=>{
   event.preventDefault()
 })
 

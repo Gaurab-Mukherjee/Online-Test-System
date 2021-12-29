@@ -268,13 +268,13 @@
 <div class="main">
     <p class="sign">Login to Your Account</p>
     <p class="txt_ln">Welcome back! Please login to your account to continue</p>
-    <form class="form1" id="loginForm">
+    <form class="form1" onsubmit="googleLogin()" id="loginForm">
         <div align="center">
             <label>
                 <input class="un " type="text" placeholder="Admin / Teacher / Student ID">
             </label>
 
-            <button id="loginWithGoogle" onclick="googleLogin()" class="google" align="right"><i
+            <button type="submit" class="google" align="right"><i
                     class="fa fa-google"></i>Sign in with Google
             </button>
         </div>
