@@ -23,7 +23,7 @@ function googleLogin() {
             // The signed-in user info.
             let user = result.user;
             let uid = result.uid;
-            // fetchUser(credential, token, user, result.uid)
+             fetchUser(credential, token, user, result.uid)
         }).catch((error) => {
         // Handle Errors here.
         let errorCode = error.code;
