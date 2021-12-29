@@ -268,7 +268,7 @@
 <div class="main">
     <p class="sign">Login to Your Account</p>
     <p class="txt_ln">Welcome back! Please login to your account to continue</p>
-    <form class="form1" onsubmit="googleLogin()" id="loginForm">
+    <form class="form1" onsubmit="googleLogin()" id="loginGoogleForm">
         <div align="center">
             <label>
                 <input class="un " type="text" placeholder="Admin / Teacher / Student ID">
@@ -278,45 +278,44 @@
                     class="fa fa-google"></i>Sign in with Google
             </button>
         </div>
-
+    </form>
+    <form onsubmit="facebookLogin()" id="loginFacebookForm">
         <div align="center">
-
             <label>
                 <input class="pass" type="password" placeholder="8 Digit Pin">
             </label>
 
             <a class="or"> / </a>
-
             <button class="facebook" align="right"><i class="fa fa-facebook"></i> Sign in with Facebook</button>
         </div>
-
-        <div align="center">
-
-            <button class="submit" align="left">Login to Your Account <i class="fa fa-arrow-right"
-                                                                         style="margin-left: 70px"></i></button>
-
-            <button class="apple" align="right"><i class="fa fa-apple"></i>Sign in with Apple</button>
-
-        </div>
-        <div align="center">
-            <p><a class="forgot" href="#">Forgot Password?</a></p>
-        </div>
-        <br>
-        <br>
-        <br>
-        <div>
-            <a class="privacy" href="#" style="alignment: left">Privacy Policy</a>
-            <a class="copyright" href="#" style="alignment: right">Copyright@OTS2021</a>
-        </div>
-
     </form>
+    <div align="center">
+
+        <button class="submit" align="left">Login to Your Account <i class="fa fa-arrow-right"
+                                                                     style="margin-left: 70px"></i></button>
+
+        <button class="apple" align="right"><i class="fa fa-apple"></i>Sign in with Apple</button>
+
+    </div>
+    <div align="center">
+        <p><a class="forgot" href="#">Forgot Password?</a></p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div>
+        <a class="privacy" href="#" style="alignment: left">Privacy Policy</a>
+        <a class="copyright" href="#" style="alignment: right">Copyright@OTS2021</a>
+    </div>
+
+
 </div>
 
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
 <!-- TODO: Add SDKs for Firebase products that you want to use-->
 <!-- https://firebase.google.com/docs/web/setup#available-libraries-->
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
 
 <!-- Your web app's Firebase configuration-->
 <!-- For Firebase JS SDK v7.20.0 and later, measurementId is optional-->
