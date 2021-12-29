@@ -1,4 +1,3 @@
-import firebase from "../node_modules/firebase/compat";
 const firebaseConfig = {
     apiKey: "AIzaSyCmQSird5PmlaN89gGEiOMRNxdDG_v8YNw",
     authDomain: "onlinetestsystem-a4cc4.firebaseapp.com",
