@@ -5,6 +5,10 @@ document.getElementById("loginGoogleForm").addEventListener("submit", (event) =>
 document.getElementById("loginFacebookForm").addEventListener("submit", (event) => {
     event.preventDefault()
 })
+
+// document.getElementById("loginAppleForm").addEventListener("submit", (event) => {
+//     event.preventDefault()
+// })
 //************************************
 // Google Login **********************
 //************************************
