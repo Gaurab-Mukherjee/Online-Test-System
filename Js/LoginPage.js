@@ -7,7 +7,6 @@ function googleLogin(){
   firebase.auth()
       .signInWithPopup(provider)
       .then((result) => {
-
         let credential = result.credential;
 
         // This gives you a Google Access Token. You can use it to access the Google API.
@@ -15,6 +14,7 @@ function googleLogin(){
         // The signed-in user info.
         let user = result.user;
         // ...
+
       }).catch((error) => {
     // Handle Errors here.
     let errorCode = error.code;
