@@ -260,6 +260,12 @@
             color: #2a2a2a;
             font-family: 'Nunito', sans-serif;
         }
+
+        .container {
+            margin: 20px;
+            width: 200px;
+            height: 200px;
+        }
     </style>
 </head>
 
@@ -289,7 +295,7 @@
             <button class="facebook" align="right"><i class="fa fa-facebook"></i> Sign in with Facebook</button>
         </div>
     </form>
-<!--    <form onsubmit="appleLogin()" id="loginAppleForm">-->
+    <!--    <form onsubmit="appleLogin()" id="loginAppleForm">-->
     <div align="center">
 
         <button class="submit" align="left">Login to Your Account <i class="fa fa-arrow-right"
@@ -298,7 +304,7 @@
         <button class="apple" align="right"><i class="fa fa-apple"></i>Sign in with Apple</button>
 
     </div>
-<!--    </form>-->
+    <!--    </form>-->
     <div align="center">
         <p><a class="forgot" href="#">Forgot Password?</a></p>
     </div>
@@ -310,6 +316,14 @@
         <a class="copyright" href="#" style="alignment: right">Copyright@OTS2021</a>
     </div>
 
+    <div class="container">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 100 100">
+            <path fill-opacity="0" stroke-width="1" stroke="#bbb"
+                  d="M81.495,13.923c-11.368-5.261-26.234-0.311-31.489,11.032C44.74,13.612,29.879,8.657,18.511,13.923  C6.402,19.539,0.613,33.883,10.175,50.804c6.792,12.04,18.826,21.111,39.831,37.379c20.993-16.268,33.033-25.344,39.819-37.379  C99.387,33.883,93.598,19.539,81.495,13.923z"/>
+            <path id="heart-path" fill-opacity="0" stroke-width="3" stroke="#ED6A5A"
+                  d="M81.495,13.923c-11.368-5.261-26.234-0.311-31.489,11.032C44.74,13.612,29.879,8.657,18.511,13.923  C6.402,19.539,0.613,33.883,10.175,50.804c6.792,12.04,18.826,21.111,39.831,37.379c20.993-16.268,33.033-25.344,39.819-37.379  C99.387,33.883,93.598,19.539,81.495,13.923z"/>
+        </svg>
+    </div>
 
 </div>
 
@@ -318,10 +332,11 @@
 <!-- TODO: Add SDKs for Firebase products that you want to use-->
 <!-- https://firebase.google.com/docs/web/setup#available-libraries-->
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 <!-- Your web app's Firebase configuration-->
 <!-- For Firebase JS SDK v7.20.0 and later, measurementId is optional-->
 <script type="module" src="Js/firebase.js"></script>
+<script type="module" src="Js/GlobalVariable.js"></script>
 <script src="Js/LoginPage.js"></script>
 </body>
 </html>

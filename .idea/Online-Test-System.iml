@@ -16,5 +16,6 @@
     <orderEntry type="library" name="firebase-analytics" level="application" />
     <orderEntry type="library" name="firebase" level="application" />
     <orderEntry type="library" name="jquery" level="application" />
+    <orderEntry type="library" name="firebase-firestore" level="application" />
   </component>
 </module>

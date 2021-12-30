@@ -17,55 +17,94 @@ function googleLogin() {
     firebase.auth()
         .signInWithPopup(provider)
         .then((result) => {
-            let credential = result.credential;
-            // This gives you a Google Access Token. You can use it to access the Google API.
-            let token = credential.accessToken;
-            // The signed-in user info.
-            let user = result.user;
-            let uid = result.uid;
-             fetchUser(credential, token, user, result.uid)
+            const credential = result.credential;
+            const user = result.user;
+            const uid = user.uid;
+            const token = user.accessToken;
+            const email = user.email;
+            const name = user.name;
+            fetchUser(token, uid, email, name)
         }).catch((error) => {
         // Handle Errors here.
-        let errorCode = error.code;
-        let errorMessage = error.message;
-        // The email of the user's account used.
-        let email = error.email;
-        // The firebase.auth.AuthCredential type that was used.
-        let credential = error.credential;
-        // ...
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        const email = error.email;
+        const credential = error.credential;
     });
 }
+
 //************************************
 // Facebook Login **********************
 //************************************
-function facebookLogin(){
+function facebookLogin() {
     let provider = new firebase.auth.FacebookAuthProvider();
     firebase.auth()
         .signInWithPopup(provider)
         .then((result) => {
-            // @typeof {"https://onlinetestsystem-a4cc4.firebaseapp.com/__/auth/handler"}
-            let credential = result.credential;
-            // The signed-in user info.
-            let user = result.user;
-            // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-            let accessToken = credential.accessToken;
-            // ...
+            const credential = result.credential;
+            const user = result.user;
+            const uid = user.uid;
+            const token = user.accessToken;
+            const email = user.email;
+            const name = user.name;
+            fetchUser(token, uid, email, name)
         })
         .catch((error) => {
             // Handle Errors here.
             let errorCode = error.code;
             let errorMessage = error.message;
-            // The email of the user's account used.
             let email = error.email;
-            // The firebase.auth.AuthCredential type that was used.
             let credential = error.credential;
-
             // ...
         });
 }
 
-function fetchUser(credential, token, user, uid) {
 
+// /uid_map/20211230121105
+function fetchUser(token, uid, email, name) {
+    const db = firebase.firestore();
+    db.collection("uid_map")
+        .where("uid", "==", uid)
+        .get()
+        .then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                // console.log(`${doc.id} => ${doc.data()}`);
+                // console.log(doc.data());
+                const G_Address = doc.get("address");
+                const G_ContactNo = doc.get("contact_no");
+                const G_CustomerId = doc.get("customer_id");
+                const G_Name = doc.get("name");
+                const G_RegistrationDate = doc.get("registration_date");
+                const G_Token = doc.get("token");
+                const G_UID = doc.get("uid");
+                const G_USERTYPE = doc.get("user_type");
+                GoToHomePage(G_USERTYPE);
+            });
+        })
+        .catch((error) => {
+            console.log("Error getting documents: ", error.message);
+        });
+}
+
+function GoToHomePage(G_USERTYPE) {
+    if (G_USERTYPE === "student") {
+        document.location.href = "StudentHomePage.html";
+    } else if (G_USERTYPE === "teacher") {
+        document.location.href = "FacultyHomePage.html";
+    } else {
+        document.location.href = "AdminHomePage.html";
+    }
 }
 
 
+// progressbar.js@1.0.0 version is used
+// Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
+function progressBar() {
+    const bar = new ProgressBar.Path('#heart-path', {
+        easing: 'easeInOut',
+        duration: 1400
+    });
+
+    bar.set(0);
+    bar.animate(1.0);  // Number from 0.0 to 1.0
+}
