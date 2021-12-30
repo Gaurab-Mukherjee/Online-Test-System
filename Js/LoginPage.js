@@ -59,7 +59,6 @@ function facebookLogin() {
         });
 }
 
-
 // /uid_map/20211230121105
 function fetchUser(token, uid, email, name) {
     const db = firebase.firestore();
@@ -67,32 +66,42 @@ function fetchUser(token, uid, email, name) {
         .where("uid", "==", uid)
         .get()
         .then((querySnapshot) => {
-            querySnapshot.forEach((doc) => {
-                // console.log(`${doc.id} => ${doc.data()}`);
-                // console.log(doc.data());
-                const G_Address = doc.get("address");
-                const G_ContactNo = doc.get("contact_no");
-                const G_CustomerId = doc.get("customer_id");
-                const G_Name = doc.get("name");
-                const G_RegistrationDate = doc.get("registration_date");
-                const G_Token = doc.get("token");
-                const G_UID = doc.get("uid");
-                const G_USERTYPE = doc.get("user_type");
-                GoToHomePage(G_USERTYPE);
-            });
+                querySnapshot.forEach((doc) => {
+                    // console.log(`${doc.id} => ${doc.data()}`);
+                    // console.log(doc.data());
+                    const G_Address = doc.get("address");
+                    const G_ContactNo = doc.get("contact_no");
+                    const G_CustomerId = doc.get("customer_id");
+                    const G_Name = doc.get("name");
+                    const G_RegistrationDate = doc.get("registration_date");
+                    const G_Token = doc.get("token");
+                    const G_UID = doc.get("uid");
+                    const G_USERTYPE = doc.get("user_type");
+                    if(G_UID === uid) {
+                    GoToHomePage(G_USERTYPE);
+                    } else {
+                        // console.log("-------->>");
+                        // registerUser();
+                    }
+                });
         })
         .catch((error) => {
             console.log("Error getting documents: ", error.message);
         });
 }
 
+function registerUser() {
+    document.location.href = "RegistrationPage.html";
+}
+
+
 function GoToHomePage(G_USERTYPE) {
     if (G_USERTYPE === "student") {
-        document.location.href = "StudentHomePage.html";
+        document.location.href = "../Online Test System/Student/StudentHomePage.html";
     } else if (G_USERTYPE === "teacher") {
-        document.location.href = "FacultyHomePage.html";
+        document.location.href = "../Online Test System/Faculty/FacultyHomePage.html";
     } else {
-        document.location.href = "AdminHomePage.html";
+        document.location.href = "../Online Test System/Admin/AdminHomePage.html";
     }
 }
 
