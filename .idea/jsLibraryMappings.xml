@@ -3,5 +3,6 @@
   <component name="JavaScriptLibraryMappings">
     <file url="PROJECT" libraries="{bootstrap, firebase, firebase-analytics, firebase-app, firebase-auth, firebase-firestore, font-awesome, jquery}" />
     <includedPredefinedLibrary name="HTTP Response Handler" />
+    <includedPredefinedLibrary name="Node.js Core" />
   </component>
 </project>

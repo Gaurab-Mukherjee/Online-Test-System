@@ -77,12 +77,7 @@ function fetchUser(token, uid, email, name) {
                     const G_Token = doc.get("token");
                     const G_UID = doc.get("uid");
                     const G_USERTYPE = doc.get("user_type");
-                    if(G_UID === uid) {
                     GoToHomePage(G_USERTYPE);
-                    } else {
-                        // console.log("-------->>");
-                        // registerUser();
-                    }
                 });
         })
         .catch((error) => {
@@ -108,12 +103,12 @@ function GoToHomePage(G_USERTYPE) {
 
 // progressbar.js@1.0.0 version is used
 // Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
-function progressBar() {
-    const bar = new ProgressBar.Path('#heart-path', {
-        easing: 'easeInOut',
-        duration: 1400
-    });
-
-    bar.set(0);
-    bar.animate(1.0);  // Number from 0.0 to 1.0
-}
+// function progressBar() {
+//     const bar = new ProgressBar.Path('#heart-path', {
+//         easing: 'easeInOut',
+//         duration: 1400
+//     });
+//
+//     bar.set(0);
+//     bar.animate(1.0);  // Number from 0.0 to 1.0
+// }
