@@ -64,23 +64,26 @@ function fetchUser(token, uid, email, name) {
     const db = firebase.firestore();
     db.collection("uid_map")
         .where("uid", "==", uid)
-        .get()
-        .then((querySnapshot) => {
-                querySnapshot.forEach((doc) => {
-                    // console.log(`${doc.id} => ${doc.data()}`);
-                    // console.log(doc.data());
-                    const G_Address = doc.get("address");
-                    const G_ContactNo = doc.get("contact_no");
-                    const G_CustomerId = doc.get("customer_id");
-                    const G_Name = doc.get("name");
-                    const G_RegistrationDate = doc.get("registration_date");
-                    const G_Token = doc.get("token");
-                    const G_UID = doc.get("uid");
-                    const G_USERTYPE = doc.get("user_type");
-                    GoToHomePage(G_USERTYPE);
-                });
-        })
-        .catch((error) => {
+        .get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            // if (doc !== null && doc.exists) {
+                // console.log(`${doc.id} => ${doc.data()}`);
+                // console.log(doc.data());
+                const G_Address = doc.get("address");
+                const G_ContactNo = doc.get("contact_no");
+                const G_CustomerId = doc.get("customer_id");
+                const G_Name = doc.get("name");
+                const G_RegistrationDate = doc.get("registration_date");
+                const G_Token = doc.get("token");
+                const G_UID = doc.get("uid");
+                const G_USERTYPE = doc.get("user_type");
+                // GoToHomePage(G_USERTYPE);
+                console.log("Hello --))")
+            // } else {
+            //     console.log("Hello --))EMPTY")
+            // }
+        });
+    }).catch((error) => {
             console.log("Error getting documents: ", error.message);
         });
 }
