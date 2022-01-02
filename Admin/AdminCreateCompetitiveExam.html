@@ -3,7 +3,7 @@
 <head>
 
     <!-- JavaScript added -->
-<!--    <script type="text/javascript" src="Js/index.js"></script>-->
+        <script type="text/javascript" src="AdminCreateCompetitiveExamJs.js"></script>
 
     <!-- metadata -->
     <meta charset="UTF-8">
@@ -20,45 +20,117 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- CSS FOR BUTTONS -->
     <style>
-
-        /*.index-app-name{*/
-        /*    display: inline;*/
-        /*    text-align: center;*/
-        /*    width: 600px;*/
-        /*    height: 600px;*/
-        /*    !*background-image: url("https://direct-upload-bucket.s3.ap-south-1.amazonaws.com/OTSback.jpg");*!*/
-        /*}*/
-
-         body {
-             margin: 0;
-             height: 100%;
-             overflow: auto;
-             background-color: #180022;
-             font-family: 'Nunito', sans-serif;
-         }
+        body {
+            margin: 0;
+            height: 100%;
+            overflow: auto;
+            background-color: #0B0B45;
+            font-family: 'Nunito', sans-serif;
+        }
 
         .main {
-            background-color: black;
+            padding-top: 1px;
+            background-color: #000000;
             alignment: center;
             width: 1300px;
-            height: 800px;
+            height: 650px;
             margin: 20px auto;
-            border-radius: 0.5em;
+            border-radius: 0em;
             box-shadow: 0 11px 35px 2px rgba(0, 0, 0, 0.14);
         }
 
         .sign {
             text-align: center;
-            padding-top: 35px;
+            padding-top: 20px;
             color: #ffffff;
             font-family: 'Nunito', sans-serif;
             font-weight: 900;
             font-size: 35px;
         }
 
-        .button1 {
+        .txt_ln {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.68);
+            font-family: 'Nunito', sans-serif;
+            font-weight: lighter;
+            font-size: 20px;
+        }
+
+
+        .un1 {
+            width: 25%;
+            height: 40px;
+            color: rgba(255, 255, 255, 0.68);
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 1px;
+            background: #2a2a2a;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            box-sizing: border-box;
+            border: 2px #2a2a2a;
+            text-align: left;
+            margin-left: 60px;
+            margin-bottom: 20px;
+            font-family: 'Nunito', sans-serif;
+        }
+
+
+        .un2 {
             width: 30%;
-            height: 60px;
+            height: 40px;
+            color: rgba(255, 255, 255, 0.68);
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 1px;
+            background: #2a2a2a;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            box-sizing: border-box;
+            border: 2px #2a2a2a;
+            margin-left: 10px;
+            text-align: left;
+            margin-bottom: 20px;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .un3 {
+            width: 25%;
+            height: 40px;
+            color: rgba(255, 255, 255, 0.68);
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 1px;
+            background: #2a2a2a;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            box-sizing: border-box;
+            border: 2px #2a2a2a;
+            margin-left: 10px;
+            text-align: left;
+            margin-bottom: 5px;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        form.form1 {
+            padding-top: 10px;
+        }
+
+
+        .un:hover, .pass:hover {
+            opacity: .8;
+            border: 2px solid #2a2a2a !important;
+        }
+
+        .submit {
+            width: 20%;
+            height: 40px;
             cursor: pointer;
             color: white;
             font-weight: 700;
@@ -67,47 +139,56 @@
             background-image: linear-gradient(to top right, #CC09C5FF 10%, red 65%, yellow);
             padding: 10px 20px;
             border: none;
-            border-radius: 8px;
+            border-radius: 5px;
             outline: none;
             box-sizing: border-box;
             border: 2px #2a2a2a;
-            margin-left: 50px;
-            margin-right: 50px;
             text-align: left;
             margin-bottom: 27px;
             font-family: 'Nunito', sans-serif;
-            font-weight: 900;
         }
 
-        .button1:hover{
+        .submit:hover {
             opacity: .8;
             background-image: linear-gradient(to top right, #CC09C5FF 10%, red 65%, yellow);
         }
 
-        .button2 {
-            width: 30%;
-            height: 60px;
-            cursor: pointer;
-            color: white;
-            font-weight: 700;
-            font-size: 16px;
-            letter-spacing: 1px;
-            background: black;
-            padding: 10px 20px;
-            border-radius: 8px;
-            box-sizing: border-box;
-            border: 2px solid transparent;
-            margin-right: 50px;
-            margin-left: 50px;
-            text-align: left;
-            margin-bottom: 27px;
-            font-family: 'Nunito', sans-serif;
-            background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg) padding-box fixed,
-            linear-gradient(to top right, #CC09C5FF 10%, red 65%, yellow) border-box;
+
+        a {
+            text-shadow: 0 0 3px rgba(117, 117, 117, 0.12);
+            color: #ffffff;
+            text-decoration: none
         }
 
-        .button2:hover {
-            background: linear-gradient(to top right, #CC09C5FF 10%, red 65%, yellow) border-box;
+        @media (max-width: 600px) {
+            .main {
+                border-radius: 0;
+            }
+        }
+
+        .fa {
+            font-size: 22px;
+            margin-right: 20px;
+        }
+
+        .privacy {
+            margin-left: 60px;
+            margin-right: 460px;
+            text-align: left;
+            margin-bottom: 27px;
+            font-size: 16px;
+            color: #2a2a2a;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .copyright {
+            margin-right: 60px;
+            margin-left: 460px;
+            text-align: right;
+            margin-bottom: 27px;
+            font-size: 16px;
+            color: #2a2a2a;
+            font-family: 'Nunito', sans-serif;
         }
 
     </style>
@@ -115,12 +196,14 @@
 </head>
 <body>
 <!-- navigation bar -->
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #34004a;padding-top: 15px;padding-bottom: 15px">
+<nav class="navbar navbar-expand-lg navbar-dark"
+     style="background-color: #34004a;padding-top: 15px;padding-bottom: 15px">
     <a class="navbar-brand" href="#">
         <img src="/Img/logoOTS.svg" width="30" height="30" class="d-inline-block align-top" alt="">
         Online Test System
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -133,7 +216,8 @@
                 <a class="nav-link" href="#">Link</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
                     Dropdown
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -157,32 +241,46 @@
 
 <!-- HTML FOR BUTTONS -->
 <div class="main">
-    <h1 class="sign">Administrator Dashboard</h1>
+    <h1 class="sign">Create Competitive Exam Question's</h1>
     <br>
-    <br>
-<!--    <div align="center">-->
-<!--        <button class="button1">Create New Exam<i class="fa fa-arrow-right" style="margin-left:10px"></i></button>-->
-<!--    </div>-->
+    <form class="form1">
     <div align="center">
-        <button class="button1">Create New Competitive Exam<i class="fa fa-arrow-right" style="margin-left:10px"></i></button>
-    </div>
-    <br>
-    <br>
-    <div align="center">
-        <button class="button2">Check Results</button>
+            <label class= "un1 " for="exam_name">Enter Competitive Exam Name:</label>
+            <input class="un2 " id="exam_name" type="text" placeholder="Enter Competitive Exam Name">
     </div>
     <div align="center">
-        <button class="button2">Publish Results</button>
-    </div>
-    <br>
-    <br>
-    <div align="center">
-        <button class="button2">Enroll Student</button>
-    </div>
-    <div align="center">
-        <button class="button2">View Student</button>
+            <label class= "un1 " for="enter_marks">Enter Full Marks:</label>
+            <input class="un2 " id="enter_marks" type="text" placeholder="Enter Full Marks..">
     </div>
 
+        <div align="center">
+            <label class= "un1 " for="total_question">Enter Total No. of Question:</label>
+            <input class="un2 " id="total_question" type="text" placeholder="Enter Total No. of Question">
+        </div>
+
+        <div align="center">
+            <input class="un2 " id="enter_question" type="text" placeholder="Edit Question here">
+        </div>
+        <div align="center">
+            <input class="un3 " id="option_1" type="text" placeholder="Option 1">
+        </div>
+        <div align="center">
+            <input class="un3 " id="option_2" type="text" placeholder="Option 2">
+        </div>
+        <div align="center">
+            <input class="un3 " id="option_3" type="text" placeholder="Option 3">
+        </div>
+        <div align="center">
+            <input class="un3 " id="option_4" type="text" placeholder="Option 4">
+        </div>
+        <div align="center">
+            <input class="un3 " id="correct_option" type="text" placeholder="correct Option">
+        </div>
+        <div align="center">
+            <button class="submit" align="left">Add Question <i class="fa fa-arrow-right"
+                                                                            style="margin-left: 55px"></i></button>
+        </div>
+    </form>
 </div>
 <!-- HTML FOR BUTTONS -->
 <br>
