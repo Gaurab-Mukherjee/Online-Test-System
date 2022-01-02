@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- JavaScript added -->
+  <script type="text/javascript" src="FacultyCreateQuestionPaperJs.js"></script>
+
+  <!-- metadata -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- title -->
+  <title>Administrator Home Page</title>
+  <link rel="icon" type="image/x-icon" href="/Img/logoOTS.svg">
+
+  <!-- link css -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- CSS FOR BUTTONS -->
+  <style>
+    body {
+      margin: 0;
+      height: 100%;
+      overflow: auto;
+      background-color: #0B0B45;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    .main {
+      padding-top: 1px;
+      background-color: #000000;
+      alignment: center;
+      width: 1300px;
+      height: 650px;
+      margin: 20px auto;
+      border-radius: 0em;
+      box-shadow: 0 11px 35px 2px rgba(0, 0, 0, 0.14);
+    }
+
+    .sign {
+      text-align: center;
+      padding-top: 20px;
+      color: #ffffff;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: 35px;
+    }
+
+    .txt_ln {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.68);
+      font-family: 'Nunito', sans-serif;
+      font-weight: lighter;
+      font-size: 20px;
+    }
+
+
+    .un1 {
+      width: 25%;
+      height: 40px;
+      color: rgba(255, 255, 255, 0.68);
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 1px;
+      background: #2a2a2a;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+      box-sizing: border-box;
+      border: 2px #2a2a2a;
+      text-align: left;
+      margin-left: 60px;
+      margin-bottom: 20px;
+      font-family: 'Nunito', sans-serif;
+    }
+
+
+    .un2 {
+      width: 30%;
+      height: 40px;
+      color: rgba(255, 255, 255, 0.68);
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 1px;
+      background: #2a2a2a;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+      box-sizing: border-box;
+      border: 2px #2a2a2a;
+      margin-left: 10px;
+      text-align: left;
+      margin-bottom: 20px;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    .un3 {
+      width: 25%;
+      height: 40px;
+      color: rgba(255, 255, 255, 0.68);
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 1px;
+      background: #2a2a2a;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+      box-sizing: border-box;
+      border: 2px #2a2a2a;
+      margin-left: 10px;
+      text-align: left;
+      margin-bottom: 5px;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    form.form1 {
+      padding-top: 10px;
+    }
+
+
+    .un:hover, .pass:hover {
+      opacity: .8;
+      border: 2px solid #2a2a2a !important;
+    }
+
+    .submit {
+      width: 20%;
+      height: 40px;
+      cursor: pointer;
+      color: white;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 1px;
+      background-image: linear-gradient(to top right, #CC09C5FF 10%, red 65%, yellow);
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+      box-sizing: border-box;
+      border: 2px #2a2a2a;
+      text-align: left;
+      margin-bottom: 27px;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    .submit:hover {
+      opacity: .8;
+      background-image: linear-gradient(to top right, #CC09C5FF 10%, red 65%, yellow);
+    }
+
+
+    a {
+      text-shadow: 0 0 3px rgba(117, 117, 117, 0.12);
+      color: #ffffff;
+      text-decoration: none
+    }
+
+    @media (max-width: 600px) {
+      .main {
+        border-radius: 0;
+      }
+    }
+
+    .fa {
+      font-size: 22px;
+      margin-right: 20px;
+    }
+
+    .privacy {
+      margin-left: 60px;
+      margin-right: 460px;
+      text-align: left;
+      margin-bottom: 27px;
+      font-size: 16px;
+      color: #2a2a2a;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    .copyright {
+      margin-right: 60px;
+      margin-left: 460px;
+      text-align: right;
+      margin-bottom: 27px;
+      font-size: 16px;
+      color: #2a2a2a;
+      font-family: 'Nunito', sans-serif;
+    }
+
+  </style>
+  <!-- CSS FOR BUTTONS -->
+</head>
+<body>
+<!-- navigation bar -->
+<nav class="navbar navbar-expand-lg navbar-dark"
+     style="background-color: #34004a;padding-top: 15px;padding-bottom: 15px">
+  <a class="navbar-brand" href="#">
+    <img src="/Img/logoOTS.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+    Online Test System
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+           aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<!-- navigation bar -->
+
+<br>
+
+<!-- HTML FOR BUTTONS -->
+<div class="main">
+  <h1 class="sign">Create Competitive Exam Question's</h1>
+  <br>
+  <form class="form1">
+    <div align="center">
+      <label class= "un1 " for="exam_name">Enter Competitive Exam Name:</label>
+      <input class="un2 " id="exam_name" type="text" placeholder="Enter Competitive Exam Name">
+    </div>
+    <div align="center">
+      <label class= "un1 " for="enter_marks">Enter Full Marks:</label>
+      <input class="un2 " id="enter_marks" type="text" placeholder="Enter Full Marks..">
+    </div>
+
+    <div align="center">
+      <label class= "un1 " for="total_question">Enter Total No. of Question:</label>
+      <input class="un2 " id="total_question" type="text" placeholder="Enter Total No. of Question">
+    </div>
+
+    <div align="center">
+      <input class="un2 " id="enter_question" type="text" placeholder="Edit Question here">
+    </div>
+    <div align="center">
+      <input class="un3 " id="option_1" type="text" placeholder="Option 1">
+    </div>
+    <div align="center">
+      <input class="un3 " id="option_2" type="text" placeholder="Option 2">
+    </div>
+    <div align="center">
+      <input class="un3 " id="option_3" type="text" placeholder="Option 3">
+    </div>
+    <div align="center">
+      <input class="un3 " id="option_4" type="text" placeholder="Option 4">
+    </div>
+    <div align="center">
+      <input class="un3 " id="correct_option" type="text" placeholder="correct Option">
+    </div>
+    <div align="center">
+      <button class="submit" align="left">Add Question <i class="fa fa-arrow-right"
+                                                          style="margin-left: 55px"></i></button>
+    </div>
+  </form>
+</div>
+<!-- HTML FOR BUTTONS -->
+<br>
+
+<!-- Footer -->
+<footer class="page-footer font-small unique-color-dark" style="background-color: #34004a;padding-top: 10px">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left mt-5" style="color: #f1f1f1">
+
+    <!-- Grid row -->
+    <div class="row mt-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-4 col-xl-2 mx-auto mb-4">
+
+        <!-- Content -->
+        <h6 class="text-uppercase font-weight-bold">About</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>PLACEHOLDER.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a href="#!">Your Account</a>
+        </p>
+        <p>
+          <a href="#!">Updates</a>
+        </p>
+        <p>
+          <a href="#!">Help</a>
+        </p>
+        <p>
+          <a href="#!">Feedback</a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-2 mx-auto mb-md-0 mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Contact</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <i class="fas fa-home mr-3"></i>Kolkata </p>
+        <p>
+          <i class="fas fa-envelope mr-3"></i>info@example.com</p>
+        <p>
+          <i class="fas fa-phone mr-3"></i>+ 01 234 567 88</p>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3" style="background: black">©2021 Project for:
+    <a href="https://iem.edu.in/"> IEM</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+
+</body>
+</html>
