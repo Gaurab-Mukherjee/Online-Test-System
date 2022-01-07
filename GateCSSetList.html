@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- JavaScript added -->
+    <script type="text/javascript" src="GateCSSetListJs.js"></script>
+
+    <!-- metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- title -->
+    <title>Administrator Home Page</title>
+    <link rel="icon" type="image/x-icon" href="/Img/logoOTS.svg">
+
+    <!-- link css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- CSS FOR BUTTONS -->
+    <style>
+
+        /*.index-app-name{*/
+        /*    display: inline;*/
+        /*    text-align: center;*/
+        /*    width: 600px;*/
+        /*    height: 600px;*/
+        /*    !*background-image: url("https://direct-upload-bucket.s3.ap-south-1.amazonaws.com/OTSback.jpg");*!*/
+        /*}*/
+
+        body {
+            margin: 0;
+            height: 100%;
+            overflow: auto;
+            background-color: #180022;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .main {
+            background-color: black;
+            alignment: center;
+            width: 1300px;
+            height: 800px;
+            margin: 20px auto;
+            border-radius: 0.5em;
+            box-shadow: 0 11px 35px 2px rgba(0, 0, 0, 0.14);
+        }
+
+        .sign {
+            text-align: center;
+            padding-top: 35px;
+            color: #ffffff;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 900;
+            font-size: 35px;
+        }
+
+
+        /* Create two equal columns that floats next to each other */
+        .column {
+            width: 1300px;
+            color: white;
+            height: 60px;
+            color: rgba(255, 255, 255, 0.68);
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 1px;
+            background: #2a2a2a;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            align-content: center;
+            box-sizing: border-box;
+            border: 2px #2a2a2a;
+            text-align: left;
+            margin-bottom: 27px;
+            margin-left: 45px;
+            margin-right: 45px;
+            font-family: 'Nunito', sans-serif;
+        }
+        .column:hover{
+            opacity: .8;
+            background-image: linear-gradient(to top right, #CC09C5FF 10%, red 65%, yellow);
+            color: black;
+        }
+
+    </style>
+    <!-- CSS FOR BUTTONS -->
+</head>
+<body>
+<!-- navigation bar -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #34004a;padding-top: 15px;padding-bottom: 15px">
+    <a class="navbar-brand" href="#">
+        <img src="/Img/logoOTS.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+        Online Test System
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+<!-- navigation bar -->
+
+<br>
+
+<!-- HTML FOR BUTTONS -->
+<div class="main">
+    <h1 class="sign">Select Set</h1>
+    <br>
+    <br>
+    <div class="row">
+        <div onclick="set_1()" class="column">
+            <h2>SET 1</h2><br>
+        </div>
+        <div onclick="set_2()" class="column">
+            <h2>SET 2</h2><br>
+        </div>
+        <div class="column">
+            <h2>SET 3  ..(Comming Soon)</h2><br>
+        </div>
+        <div class="column">
+            <h2>SET 4 ..(Comming Soon)</h2><br>
+        </div>
+        <div class="column">
+            <h2>SET 5 ..(Comming Soon)</h2><br>
+        </div>
+        <div class="column">
+            <h2>SET 6 ..(Comming Soon)</h2><br>
+        </div>
+    </div>
+</div>
+<!-- HTML FOR BUTTONS -->
+<br>
+<!-- Footer -->
+<footer class="page-footer font-small unique-color-dark" style="background-color: #34004a;padding-top: 10px">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left mt-5" style="color: #f1f1f1">
+
+        <!-- Grid row -->
+        <div class="row mt-3">
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-2 mx-auto mb-4">
+
+                <!-- Content -->
+                <h6 class="text-uppercase font-weight-bold">About</h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>PLACEHOLDER.</p>
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                <!-- Links -->
+                <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                    <a href="#!">Your Account</a>
+                </p>
+                <p>
+                    <a href="#!">Updates</a>
+                </p>
+                <p>
+                    <a href="#!">Help</a>
+                </p>
+                <p>
+                    <a href="#!">Feedback</a>
+                </p>
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-2 mx-auto mb-md-0 mb-4">
+
+                <!-- Links -->
+                <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                    <i class="fas fa-home mr-3"></i>Kolkata </p>
+                <p>
+                    <i class="fas fa-envelope mr-3"></i>info@example.com</p>
+                <p>
+                    <i class="fas fa-phone mr-3"></i>+ 01 234 567 88</p>
+
+            </div>
+            <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3" style="background: black">©2021 Project for:
+        <a href="https://iem.edu.in/"> IEM</a>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+</body>
+</html>
